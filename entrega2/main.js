@@ -16,29 +16,6 @@ const pack3 = new Pack("Pro Praetorian", 50, " Mensual", "3");
 
 const packs = [pack1, pack2, pack3]
 
-function MenuProductos (){
-    let Menudeploy = "Seleccione su Pack de entrenamiento \n";
-    packs.forEach(pack => {
-      Menudeploy += pack.id +")" + pack.nombre + "-" + "USD" + pack.precio + "\n";
-    })
-    let Respuesta = prompt (Menudeploy);
-    return Respuesta;
-
-}
-
-function agregarPack(id){
-   const packencontrado = packs.find(pack => pack.id == id);
-   if (packencontrado == undefined){
-    alert ("Quizas todavia no estes listo...");
-   } else {
-    const  adquirido = prompt("Compraste" + packencontrado.nombre + "por" + packencontrado.precio);
-  
-
-
-   }
-   
-
-}
 function Pregunta(){
     const Respuesta = prompt("Desea adquirir alguno de nuestros packs? \n1) Si \n2) No");
     if (Respuesta == "1"){
@@ -46,14 +23,39 @@ function Pregunta(){
     } else {
         return false;
     }
-
 }
 
-function ComprarPack() {
-    while (Pregunta()) {
-        let Mostarmenu = MenuProductos ();
-      
+function ComprarPack(){
+    while (Pregunta()){
+        let id = MenuProductos();
+        let pack = packs.find(x => x.id == id);
+        total += pack.precio;
+        alert("Se ha adquirido el pack " + pack.nombre + " por un total de " + pack.precio + "USD");
+        agregarPack(id);
+    }    
+}
 
-  }
-  }
-  ComprarPack();
+
+
+function MenuProductos (){
+    let Menudeploy = "Seleccione su Pack de entrenamiento \n";
+    packs.forEach(pack => {
+      Menudeploy += pack.id +")" + pack.nombre + "-" + "USD" + pack.precio + "\n";
+    })
+    let Respuesta = prompt (Menudeploy);
+    return Respuesta;
+}
+
+function agregarPack(id){
+   const packencontrado = packs.find(x => x.id == id);
+   if (packencontrado == undefined){
+    alert ("Quizas todavia no estes listo...");
+   } else {
+    // const  adquirido = prompt("Compraste " + packencontrado.nombre + "por USD" + packencontrado.precio);
+   }
+}
+
+ComprarPack();
+    
+
+
