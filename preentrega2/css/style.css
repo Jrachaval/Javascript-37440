@@ -1,0 +1,85 @@
+body {
+  background-color: black;
+}
+body ul li {
+  padding: 40px;
+}
+body .h1 {
+  font-family: "Keania One";
+  font-style: normal;
+  font-size: 100px;
+  text-align: center;
+  width: 200px;
+  height: 50px;
+  color: rgba(59, 160, 233, 0.6);
+}
+body .container-fluid {
+  background-image: url(../assets/img/wallpaper-mania.com_High_resolution_wallpaper_background_ID_77702071762.jpg);
+  width: 1920px;
+  height: 1080px;
+}
+body .container {
+  align-items: flex-start;
+  margin-left: 0.2rem;
+}
+
+.h2, p, .h3 {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-style: normal;
+  font-size: 120px;
+  color: white;
+}
+
+/*  p {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+  color: $text-color
+}*/
+.h3 {
+  color: yellow;
+  font-size: 60px;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+  color: rgb(255, 196, 0);
+}
+
+.card-img-top {
+  width: 35%;
+  height: 35%;
+}
+
+.card {
+  flex-direction: row;
+}
+
+.card-text {
+  color: rgb(238, 159, 12);
+}
+
+nav img {
+  display: flex;
+  flex-direction: column;
+}
+
+.img-thumbnail {
+  width: 700px;
+  height: 170px;
+}
+.container-l{
+  padding: 20px;
+  margin: 2px;
+}
+
+@media (max-width:1791px){
+    .row {
+      flex-direction: column;
+    }
+}
+
+
+/*# sourceMappingURL=style.css.map */
